@@ -9,12 +9,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Build with ufbt
         uses: flipperdevices/flipperzero-ufbt-action@v0.1.0
-        id: build-app
         with:
           sdk-channel: release
       - name: Build with ufbt
         uses: flipperdevices/flipperzero-ufbt-action@v0.1.0
-        id: build-app
         with:
           sdk-channel: release
       - name: Upload app artifacts
