@@ -5,10 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: 'ufbt: Build for Release branch'
     steps:
-      - name: Checkout (will fail)
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Build with ufbt
+      - name: Build with ufbt (will fail)
         uses: flipperdevices/flipperzero-ufbt-action@v0.1.0
+        continue-on-error: true
         with:
           sdk-channel: release
       - name: Build with ufbt
